@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------
+# Author: WikiOur
+# Author website: https://wikiour.com
+# Description: Lazy Loading Img & WebP
+------------------------------------>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="https://wikiour.github.io/lazy-loading-pull/css/style.css"> -->
+  <title>Lazy loading of images - Img & WebP</title>
+  <meta name="description" content="Easy and productive library for lazy loading of images">
+  <meta name="keywords" content="lazy loading, Lazy Loading Img, Lazy Loading WebP">
+  <meta name="author" content="WikiOur">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wikiour.github.io/lazy-loading-pull/" />
+  <meta property="og:image" content="https://wikiour.github.io/lazy-loading-pull/img/lazy-loading-pull.jpg" />
+  <meta property="og:title" content="Lazy loading of images - Img & WebP" />
+  <meta property="og:description" content="Easy and productive library for lazy loading of images" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+      <h1>Lazy loading of images - Img & WebP</h1>
+      <h2>Easy and productive library for lazy loading of images</h2>
+      <p>Lazy loading of images (<a href="https://wikiour.github.io/lazy-loading-pull">lazy loading</a>) is a web page performance optimization technique that allows images to be
+        loaded
+        only when they become visible on the user's screen. You can download the <strong>lazy-loading-pull library</strong> from the repository on <a href="https://github.com/wikiour/lazy-loading-pull">GitHub</a> or install it via <a href="https://www.npmjs.com/package/lazy-loading-pull">npm</a>.</p>
+
+      <div>
+        <a href="https://github.com/wikiour/lazy-loading-pull">
+          <svg aria-hidden="true" height="50" viewBox="0 0 16 16" version="1.1" width="50" data-view-component="true"
+            class="octicon octicon-mark-github">
+            <path
+              d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="container-img">
+        <img src="./img/image.jpg" alt="Images">
+      </div>
+
+      <h2>Lazy loading can provide several benefits</h2>
+      <p>* Faster page loading: lazy loading allows images to load only when they become visible on the user's screen.
+        This means
+        the page loads faster because not all images are loaded at once.
+      
+        * Save traffic: lazy loading saves traffic because images are loaded only when they're actually needed. This is
+        especially useful for users with a mobile internet connection, where traffic restrictions can be strict.
+      
+        * Improved user experience: lazy loading improves the user experience because users don't have to wait long to
+        see page
+        content. It can also reduce user bounce because pages load faster and users get the information they were
+        looking for
+        faster.
+      
+        * SEO optimization: lazy loading can help in SEO optimization because fast user experience is one of the search
+        engine
+        ranking factors.</p>
+
+      <div class="container-img-picture">
+        <picture>
+          <source srcset="./img/image.webp" type="image/webp" />
+          <img src="./img/image.png" alt="Images">
+        </picture>
+      </div>
+
+      <p>Lazy loading can be useful for pages with lots of images, such as galleries, blogs and online stores, which can
+        significantly slow down the page loading time. lazy loading of images can speed up page loading, reduce traffic
+        usage,
+        and improve user experience.</p>
+
+      <p>You can use our "<a href="https://wikiour.github.io/lazy-loading-pull">lazy-loading-pull</a>" JavaScript library to implement lazy image loading. This library uses the
+        "data-src"
+        attribute instead of "src" for images to be lazily loaded. When the user scrolls the page and the image becomes
+        visible,
+        JavaScript loads the image from "data-src" to "src." Our library works with any image.</p>
+
+      <p>We also use the "loading" attribute with a value of "lazy," which is supported by browsers starting with Chrome
+        76,
+        Firefox 75, and Opera 63. This attribute indicates that the browser should lazily load the image when it appears
+        in the
+        scope.</p>
+
+
+      <p>In order to lazily load images, our "<a href="https://wikiour.github.io/lazy-loading-pull">lazy-loading-pull</a>" library uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>, which
+        detects when
+        an item appears on the screen and is ready to be loaded. This API allows you to load images only when they are
+        in the
+        user's field of view. We also apply a pre-loading of the image before the user reaches it for 1000px (you can
+        change
+        this parameter in rootMargin: '1000px', ) this avoids waiting for the user to load.
+      </p>
+
+      <p>The Intersection Observer API is a JavaScript interface that allows you to monitor the intersection of elements
+        on a
+        page with other elements or scopes, such as the browser window.</p>
+
+      <p>The Intersection Observer API is used to detect when an element appears on or leaves the screen to perform
+        certain
+        actions, such as lazily loading images. Instead of loading all images at once, we use the Intersection Observer
+        API to
+        determine when an image becomes visible on the screen and only then start loading it. This can speed up page
+        loading and
+        reduce the amount of data transferred.</p>
+
+      <p>The IntersectionObserverEntry object contains information about the intersection state, such as the size and
+        coordinates
+        of the element, its relationship to another element or scope, and the time when the intersection occurred.</p>
+
+      <p>Overall, the Intersection Observer API can be a very useful tool for improving performance and user experience
+        on
+        websites.</p>
+
+      <div>
+        <a href="https://github.com/wikiour/lazy-loading-pull">
+          <svg aria-hidden="true" height="50" viewBox="0 0 16 16" version="1.1" width="50" data-view-component="true"
+            class="octicon octicon-mark-github">
+            <path
+              d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+
+      <script src="index.js"></script>
+
+</body>
+
+</html>

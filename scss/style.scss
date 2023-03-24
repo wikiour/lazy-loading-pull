@@ -1,0 +1,114 @@
+/* -----------------------------------------------------------
+# Author: WikiOur
+# Author website: https://wikiour.com
+# GitHub: https://github.com/wikiour
+# YouTube: https://youtube.com/@wikiour
+# Facebook: https://facebook.com/wikiour
+# Instagram: https://instagram.com/wikiour
+# Patreon: https://patreon.com/wikiour
+
+Description: Lazy loading of images - Img & WebP
+------------------------------------------------------------ */
+@import url("https://wikiour.github.io/styleplus/css/null.css");
+
+body {
+	background-color: #0a5576;
+	color: #d1effc;
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+h1 {
+	color: #f0a45d;
+	font-size: 30px;
+	padding: 20px 0 0 0;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+h2 {
+	color: #f0a45d;
+	font-size: 20px;
+	padding: 20px 0 0 0;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+p {
+	padding: 20px;
+}
+
+a {
+	color: #d1effc;
+	&:hover {
+		color: #f0a45d;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	border-radius: 15px;
+}
+
+.container-img,
+.container-img-picture {
+	width: 100%;
+	height: 500px;
+	padding: 20px 0px;
+}
+
+.loading {
+	position: relative;
+}
+
+.loader {
+	position: absolute;
+	z-index: 11;
+	top: 45%;
+	left: 48%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	border: 5px solid #ffffff;
+	border-top-color: #525252;
+	border-radius: 50%;
+	animation: spin 1s ease-in-out infinite;
+	display: none;
+}
+
+.loading::after {
+	content: "";
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0a5576;
+}
+
+.loading .loader {
+	display: block;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
