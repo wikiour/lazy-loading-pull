@@ -13,6 +13,10 @@ Remote connection:
 ```
 Connecting via npm
 npm i -D lazy-loading-pull
+
+Connecting to the project
+import lazyLoadingPull from 'lazy-loading-pull';
+lazyLoadingPull();
 ```
 You can also download the repository and use it in your project https://github.com/wikiour/lazy-loading-pull
 
